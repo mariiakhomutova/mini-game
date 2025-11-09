@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Собери Beaulieu 4008 ZM II</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="topbar">
+        <div class="title">
+            <span class="accent">Mini</span>Build — Beaulieu 4008 ZM II
+        </div>
+        <div class="actions">
+            <button id="hintBtn" class="btn" aria-label="Подсказка (показать контуры)">Подсказка</button>
+        </div>
+    </header>
+
+    <main class="game">
+        <section class="board" id="board" aria-label="Поле сборки камеры">
+            <!-- Контур-цели (слоты) -->
+            <!-- Используем data-slot, чтобы сопоставить с деталью -->
+            <div class="slot" data-slot="body" style="left: 90px; top: 80px; width: 360px; height: 220px"></div>
+            <div class="slot circle" data-slot="lens" style="left: 420px; top: 140px; width: 120px; height: 120px"></div>
+            <div class="slot" data-slot="viewfinder" style="left: 300px; top: 60px; width: 70px; height: 40px"></div>
+            <div class="slot circle" data-slot="zoomRing" style="left: 360px; top: 140px; width: 120px; height: 120px"></div>
+            <div class="slot" data-slot="grip" style="left: 200px; top: 300px; width: 60px; height: 170px"></div>
+            <div class="slot" data-slot="trigger" style="left: 160px; top: 250px; width: 110px; height: 30px"></div>
+
+            <!-- Фоновая подпись камеры (для атмосферы) -->
+            <div class="watermark">Beaulieu 4008 ZM II</div>
+        </section>
+
+        <section class="tray" id="tray" aria-label="Панель деталей">
+            <!-- Детали будут добавлены скриптом -->
+        </section>
+    </main>
+
+    <div id="win" class="overlay" hidden>
+        <div class="dialog">
+            <h2>Камера собрана!</h2>
+            <p>Отлично! Вы собрали Beaulieu 4008 ZM II.</p>
+            <button class="btn primary" id="playAgain">Далее</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Подсказка: перетяните детали из нижней панели на соответствующие контуры.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
